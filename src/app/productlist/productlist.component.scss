@@ -1,0 +1,30 @@
+
+h4.price{
+  font-size:1.2rem;
+}
+p.price{
+  margin-bottom: 0.1rem;
+  font-size:1rem;
+}
+h5.card-title{
+  font-size: 1.3rem;
+  margin-top:0.5rem;
+
+}
+
+.card:hover{
+ cursor: pointer;
+}
+
+.btn-outline-primary.buynow{
+ line-height: 1;
+ position: absolute;
+ right: 7px;
+ bottom:7px;
+ padding: 0.25rem 0.4rem;
+ font-size: 1rem;
+}
+
+.card-img{
+  height:282px;
+}

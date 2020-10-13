@@ -1,0 +1,150 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class=" col-md-12 col-lg-6 d-flex ">
+      <div class="col-12 d-flex align-items-center justify-content-center shadow-sm border h-100">
+        <div class="py-5">
+          <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 col-lg-6  d-flex ">
+      <div class="col-12 border shadow-sm h-100 text-secondary p-3">
+        <div class="border-bottom py-3">
+          <h4 class="text-primary">{{productDataname}}</h4>
+          <p class="h6">4 items included (1 Bed, 1 Mattress, 1 End Table and 1 Chest) <small
+              class="text-primary">Recommend By Inhabitr</small></p>
+        </div>
+        <div class="border-bottom py-3">
+          <h4 class=""><small class="">Price:</small> <strong>${{productData[Price]*quantitySelected}}</strong><small
+              class="font-weight-bold">{{rentType}}</small> </h4>
+
+          <div class="btn-group radio-group mt-3" data-toggle="buttons" on-click="handleActivebtn($event)">
+
+            <label class="btn btn-outline-secondary " [ngClass]="(activebtn=='rent')?'radioactive':''">
+              <input type="radio" name="options" id="option2" value='rent' autocomplete="off" chacked> Rent
+              <i class="fa fa-check"></i>
+            </label>
+
+            <label class="btn btn-outline-secondary" [ngClass]="(activebtn=='used')?'radioactive':''">
+              <input type="radio" name="options" id="option1" value='used' autocomplete="off"> Used
+              <i class="fa fa-check"></i>
+            </label>
+
+            <label class="btn btn-outline-secondary" [ngClass]="(activebtn=='new')?'radioactive':''">
+              <input type="radio" name="options" id="option2" value='new' autocomplete="off">New
+              <i class="fa fa-check"></i>
+            </label>
+
+          </div>
+
+          <div class="col-md-6 col-sm-8 " [ngClass]="(activebtn!='rent')?'d-none':''">
+            <p class="mt-3">Select Duration For Rent</p>
+            <ng5-slider [(value)]="value" [options]="options" (userChange)="onrentChange($event)"></ng5-slider>
+          </div>
+
+          <div class="col-md-6 col-sm-8 text-secondary my-3">
+            <p>Select Quantity</p>
+            <ng-select [items]="quantityData" (change)="changed($event)" [(ngModel)]="quantitySelected">
+            </ng-select>
+
+
+          </div>
+
+
+          <div>
+            <a routerLink="#" class="text-right text-underline  h6 text-right">Buy Later Calculation</a></div>
+
+
+
+
+        </div>
+        <div class="mt-3">
+          <button class="btn btn-outline-secondary " [ngClass]="(activebtn=='rent')?'bg-secondary text-white':''">Rent
+            Now</button>
+          <button class="btn btn-outline-secondary ml-3"
+            [ngClass]="(activebtn=='used')?'bg-secondary text-white':''">Buy Used</button>
+          <button class="btn btn-outline-secondary ml-3" [ngClass]="(activebtn=='new')?'bg-secondary text-white':''">Buy
+            New</button>
+        </div>
+        <div class="d-flex my-4 lh1">
+          <p class="mt-3"></p>
+          <div class="mr-3"> <img src='assets/img/nocontact.png' width="50"><br /> No Contact <br /> Delivery </div>
+          <div class="mr-3"> <img src='assets/img/delivered.png' width="50"><br /> Free Delivery </div>
+          <div class=""> <img src='assets/img/safety.png' width="50"><br />Free Maintainnce <br /> for 1 year </div>
+        </div>
+        <h6>No need to lug these items anymore! </h6>
+        <h6 class="mt-2">We will consolidate all items, bring them to your home and stage them at an area of your choice
+          and remove all boxes </h6>
+
+      </div>
+    </div>
+    <div class="col-12 d-flex ">
+      <div class="col-12 border shadow-sm h-100 text-secondary p-3">
+        <h4 class="mt-3 text-secondary">Included Item -</h4>
+        <div class="row mt-3">
+          <div class="col-3"><a routerLink="/Product"> <img src='assets/img/products/1.jpg' width="120"> <br />
+              <h5 class="mt-3 text-secondary"> Lorem Ipsum </h5>
+            </a></div>
+          <div class="col-3"><a routerLink="/Product"> <img src='assets/img/products/2.jpg' width="120"> <br />
+              <h5 class="mt-3 text-secondary"> Lorem Ipsum </h5>
+            </a></div>
+          <div class="col-3"><a routerLink="/Product"> <img src='assets/img/products/3.jpg' width="120"> <br />
+              <h5 class="mt-3 text-secondary"> Lorem Ipsum </h5>
+            </a></div>
+          <div class="col-3"><a routerLink="/Product"> <img src='assets/img/products/4.jpg' width="120"> <br />
+              <h5 class="mt-3 text-secondary"> Lorem Ipsum </h5>
+            </a></div>
+        </div>
+        <h4 class="mt-3 text-secondary">Description-</h4>
+        <h6>The stunning Retta Twin Bedroom Set comprises the black leather upholstered, twin sized Modern Clif
+          Upholstered Bed. Place the comfy Inhabitr Memory Foam Mattress on it. This package also includes the sturdy
+          wooden North End Table. Store all your clothing essentials in the contemporary Lloyd Chest. What's not to
+          love? </h6>
+        <div class="row">
+          <div class="col-sm-6">
+            <h4 class="mt-3 text-secondary">Features-</h4>
+
+
+            <h5>Modern Clif Upholstered Bed</h5>
+            <ul>
+              <li>Platform bed with black leather upholstery</li>
+              <li>Available in Twin size</li>
+              <li> Mattress NOT included.</li>
+            </ul>
+            <h5>Inhabitr Memory Foam Mattress</h5>
+            <ul>
+              <li>Green tea infused</li>
+              <li>Castor seed oil against bacteria</li>
+            </ul>
+            <h5>North End Table</h5>
+            <ul>
+              <li>Round tray top</li>
+              <li>All-wood construction</li>
+              <li>Raised edge</li>
+              <li>Light-colored splayed wooden legs</li>
+              <li>Choice of colors: White, Blue, Grey or Silver</li>
+              <li>Dimensions: 18"D X 22"H</li>
+            </ul>
+            <h5>Lloyd Chest</h5>
+            <ul>
+              <li>Contemporary style</li>
+              <li>No of Drawers: 5</li>
+              <li>Dimension: 27"W X 15"D X 47"H</li>
+            </ul>
+
+          </div>
+          <div class="col-sm-6">
+
+            <h4 class="mt-3 text-secondary">Benefits-</h4>
+            <ul>
+              <li>Curated by Inhabitr designers</li>
+              <li>White glove delivery, assembly & set up</li>
+              <li>Upscale furniture at nominal rates</li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

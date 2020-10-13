@@ -1,0 +1,16 @@
+
+.btn i.fa {
+	opacity: 0;
+}
+.btn.active i.fa {
+	opacity: 1;
+}
+
+.btn{
+  font-weight: 600;
+}
+
+input[type='radio']{
+  opacity: 0;
+}
+

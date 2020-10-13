@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif|Varela+Round');
+
+
+body,p,span{
+ font-family: 'Noto Serif', serif ;
+}
+
+@for $i from 1 through 6 {
+  h#{7 - $i} {
+      //font-size: $i * 1.4em;
+      font-family: 'Varela Round', sans-serif ;
+  }
+}
+
+p{
+  margin-bottom: 0.2rem;
+}
+
+.btn-outline-primary{
+  border:1px solid $primary
+}
+
+.btn{
+  font-family: $font-family-sans-serif
+}
+
+.radio-group .btn.radioactive{
+  box-shadow: inset 0.01rem 0.01rem 0.3rem 0.01rem rgba(0, 0, 0, 0.55);
+}
+
+.radio-group .btn{
+  box-shadow: $box-shadow-sm
+}
+
+.radio-group .btn-outline-secondary{
+  border:1px solid $secondary !important;
+}
+
+.border{border:1px solid $gray-200}
+.border-bottom{border-bottom:1px solid $gray-200}
+
+.btn-outline-primary:hover {
+  color: $white;
+}
+
+a:hover{text-decoration: none;}
+
+.card{
+  width:98%;
+  margin:0 auto;
+  transition: all 0.2s linear;
+  box-shadow:  $box-shadow-sm;
+}
+
+.card:hover{
+
+  transition: all 0.2s linear;
+  box-shadow:  $box-shadow;
+
+}
+
+.ng5-slider .ng5-slider-pointer {
+  cursor: pointer;
+  top: -14px;
+  background-color: $primary !important;
+  z-index: 3;
+  border-radius: 16px;
+}
+
+.ng5-slider .ng5-slider-pointer.ng5-slider-active::after {
+  background-color:$white !important;
+}
+
+.ng5-slider{
+  color:$secondary;
+}
+
+.ng5-slider .ng5-slider-tick {
+  text-align: center;
+  cursor: pointer;
+  background: $secondary !important;
+  border-radius: 50%;
+
+}
+
+.ng5-slider .ng5-slider-bar{
+  background-color: $secondary !important;
+}
+
+
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-selected, .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-selected.ng-option-marked {
+  color: $secondary !important;
+  background-color: $gray-200 !important;
+}
+
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-marked {
+  color: $secondary !important;
+  background-color: $gray-200 !important;
+}
+
+.lh1{
+  line-height: 1.2;
+}
